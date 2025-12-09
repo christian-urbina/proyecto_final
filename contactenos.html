@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patitas Grooming - Inicio</title>
+    <title>Contáctenos - Patitas Grooming</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 
 <header>
     <nav class="navbar-banner">
@@ -23,18 +22,23 @@
         </ul>
     </nav>
 </header>
-<div class="carousel-container">
-    <div class="carousel">
-        <div class="slide"><img src="https://picsum.photos/900/450?random=1" alt="Imagen 1"></div>
-        <div class="slide"><img src="https://picsum.photos/900/450?random=2" alt="Imagen 2"></div>
-        <div class="slide"><img src="https://picsum.photos/900/450?random=3" alt="Imagen 3"></div>
-    </div>
 
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-</div>
+<section class="section">
+    <h2>Contáctenos</h2>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
 
-<script src="proyectofianl.js"></script>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="tuemail@ejemplo.com" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</section>
 
 <footer>
     <p>© 2025 Patitas Grooming. Todos los derechos reservados.</p>
