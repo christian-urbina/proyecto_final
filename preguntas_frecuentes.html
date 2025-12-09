@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Patitas Grooming</title>
+    
+    <link rel="stylesheet" href="preguntas_frecuentes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    
+</head>
+
+<body>
+
+  
+    <header>
+        <nav class="navbar-banner">
+            <div class="logo">
+                🐾 <span>Patitas Grooming</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Servicios</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+                <li><a href="acercadenosotros.html">Acerca de Nosotros</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+
+    <div class="container">
+
+        <header class="header">
+            <h1> Preguntas Frecuentes</h1>
+            <p class="lead">Resolvemos las dudas más comunes sobre nuestros servicios de grooming.</p>
+        </header>
+
+        <div class="lista-preguntas">
+
+            <div class="pregunta-item">
+                <button class="pregunta-boton">¿Cada cuánto debo llevar a mi perro al grooming?</button>
+                <div class="pregunta-respuesta">
+                    <p>La mayoría de los perros deben asistir cada 4 a 6 semanas, dependiendo del tipo de pelaje.</p>
+                </div>
+            </div>
+
+            <div class="pregunta-item">
+                <button class="pregunta-boton">¿Mi mascota necesita estar vacunada?</button>
+                <div class="pregunta-respuesta">
+                    <p>Sí, pedimos que las vacunas básicas estén al día para seguridad de todas las mascotas.</p>
+                </div>
+            </div>
+
+            <div class="pregunta-item">
+                <button class="pregunta-boton">¿Aceptan gatos para grooming?</button>
+                <div class="pregunta-respuesta">
+                    <p>Sí, contamos con grooming especializado para gatos en un ambiente controlado.</p>
+                </div>
+            </div>
+
+            <div class="pregunta-item">
+                <button class="pregunta-boton">¿Cuánto dura una sesión?</button>
+                <div class="pregunta-respuesta">
+                    <p>Entre 1 y 2 horas, dependiendo del tamaño de la mascota y los servicios solicitados.</p>
+                </div>
+            </div>
+
+            <div class="pregunta-item">
+                <button class="pregunta-boton">¿Puedo quedarme mientras atienden a mi mascota?</button>
+                <div class="pregunta-respuesta">
+                    <p>No permitimos acompañantes dentro del área de grooming para seguridad, pero puedes esperar afuera.</p>
+                </div>
+            </div>
+
+            <div class="pregunta-item">
+                <button class="pregunta-boton">¿Qué incluye un grooming completo?</button>
+                <div class="pregunta-respuesta">
+                    <p>Baño, secado, corte, uñas, oídos y perfume. También hay extras disponibles.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const botones = document.querySelectorAll(".pregunta-boton");
+
+        botones.forEach(boton => {
+            boton.addEventListener("click", () => {
+                boton.classList.toggle("activo");
+                const respuesta = boton.nextElementSibling;
+
+                if (boton.classList.contains("activo")) {
+                    respuesta.style.maxHeight = respuesta.scrollHeight + "px";
+                } else {
+                    respuesta.style.maxHeight = "0";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
