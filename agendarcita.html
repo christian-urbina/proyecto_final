@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agendar Cita - Patitas Grooming</title>
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar-banner">
+        <div class="logo">
+            🐾 <span>Patitas Grooming</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Servicios</a></li>
+            <li><a href="acercadenosotros.html">Acerca de Nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="contactenos.html">Contáctenos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="site">
+
+    <header class="header">
+        <div class="logo">
+            <div class="mark">PG</div>
+            <div>
+                <div class="subtitle"> Agenda tu cita</div>
+                <h1>Reserva una visita para tu mascota</h1>
+                <p class="lead">Completa el formulario para elegir fecha, hora y servicio.</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-title">
+        <h2>Agenda tu cita</h2>
+    </div>
+
+    <main class="grid">
+
+        <!-- PRIMERA TARJETA → FORMULARIO -->
+        <article class="card hero">
+            <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=1200&q=60" alt="Mascota en grooming">
+            
+            <div class="content">
+                <h3>Formulario de reserva</h3>
+
+                <form id="cita" class="formulario" novalidate>
+                    
+                    <label>Nombre completo *</label>
+                    <input type="text" required>
+
+                    <label>Teléfono *</label>
+                    <input type="tel" required>
+
+                    <label>Correo electrónico *</label>
+                    <input type="email" required>
+
+                    <label>Tipo de mascota *</label>
+                    <select required>
+                        <option value="">Selecciona</option>
+                        <option>Perro</option>
+                        <option>Gato</option>
+                        <option>Otro</option>
+                    </select>
+
+                    <label>Servicio *</label>
+                    <select required>
+                        <option value="">Selecciona</option>
+                        <option>Baño completo</option>
+                        <option>Corte de pelo</option>
+                        <option>Baño + Corte</option>
+                        <option>Desparasitación</option>
+                        <option>Consulta</option>
+                    </select>
+
+                    <label>Fecha *</label>
+                    <input type="date" required>
+
+                    <label>Hora *</label>
+                    <input type="time" required>
+
+                    <label>Comentarios (opcional)</label>
+                    <textarea rows="3"></textarea>
+
+                    <button class="btn" type="submit">Agendar cita</button>
+                </form>
+
+                <div id="mensaje" class="muted"></div>
+            </div>
+        </article>
+
+        <!-- TARJETA 2 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=60" alt="">
+            <div class="content">
+                <h3>Requisitos para tu cita</h3>
+                <p>Trae su tarjeta de vacunas y asegúrate de que tu mascota esté en buenas condiciones.</p>
+            </div>
+        </article>
+
+        <!-- TARJETA 3 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=1200&q=60" alt="">
+            <div class="content">
+                <h3>Horarios disponibles</h3>
+                <p>De lunes a sábado entre 8:00 AM y 6:00 PM.</p>
+            </div>
+        </article>
+
+        <!-- TARJETA 4 -->
+        <article class="card">
+            <img src="img/img9.jpg" alt="">
+            <div class="content">
+                <h3>Servicios más solicitados</h3>
+                <p>Baño antipulgas, corte estético, limpieza de oídos y corte de uñas.</p>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        © Patitas Grooming • Tu Ciudad • Tel: +504 0000 0000
+    </footer>
+</div>
+
+<script>
+    const form = document.getElementById("cita");
+    const msg = document.getElementById("mensaje");
+
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        msg.textContent = "¡Cita enviada! Nos comunicaremos para confirmar.";
+    });
+</script>
+
+</body>
+</html>
